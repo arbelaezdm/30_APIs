@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+</head>
+
+<body>
+        <p>Listado de paises</p>
+        <!-- USANDO UN SELECT -->
+        <select name="" id="">
+            <% countries.forEach(country=> { %>
+                <option>
+                    <%= country.name.common %>
+        
+                        <% }) %>
+                </option>
+        </select>
+
+    
+    <ul>
+        <% countries.forEach(country=> { %>
+
+            <li>
+                <h4>
+                    <%= country.name.common %>
+                </h4>
+                <img src=" <%= country.flags.png %> " width="100">
+            </li>
+            <% }) %>
+    </ul>
+
+    <h1>Municipios Colombia</h1>
+    <ul>
+        <% departamentos.forEach(departamento=> { %>
+
+            <li>
+                <h4>
+                    <%= departamento.municipio %>
+                </h4>
+            </li>
+            <% }) %>
+    </ul>
+
+</body>
+
+</html>
